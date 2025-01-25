@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c26l5js6phbwv"]
+
+[ext_resource type="PackedScene" uid="uid://dw6r2oqb8f57k" path="res://Scenes/game.tscn" id="1_vuuuw"]
+[ext_resource type="AudioStream" uid="uid://cvhfesngs4tg2" path="res://Assets/Musics/BubbleTrouble.wav" id="2_elfgl"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Game" parent="." instance=ExtResource("1_vuuuw")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_elfgl")
+autoplay = true

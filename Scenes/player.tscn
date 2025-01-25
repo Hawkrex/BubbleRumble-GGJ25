@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm5tawd3jaac1"]
+
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_6lxji"]
+[ext_resource type="Texture2D" uid="uid://brjts1slsay76" path="res://Assets/Graphics/Characters/CoreBubble.png" id="1_fq68g"]
+[ext_resource type="Texture2D" uid="uid://4buapqodt1sp" path="res://Assets/Graphics/Characters/CanonBubble.png" id="3_mkko0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rhrie"]
+radius = 16.0
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_6lxji")
+
+[node name="CanonEnd" type="Node2D" parent="."]
+position = Vector2(0, -19.775)
+
+[node name="CoreSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_fq68g")
+
+[node name="CanonSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -17)
+texture = ExtResource("3_mkko0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rhrie")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
