@@ -3,10 +3,16 @@ using Godot;
 public partial class Player : CharacterBody2D
 {
 	[Export]
+	public int Health { get; set; } = 3;
+
+	[Export]
 	public float MovementSpeed { get; set; } = 300.0f;
 
 	[Export]
 	public float FireRate { get; set; } = 0.5f;
+
+	[Signal]
+	public delegate void GameOverEventHandler();
 
 	public readonly PackedScene Bullet = ResourceLoader.Load<PackedScene>("res://Scenes/bullet.tscn");
 
@@ -53,6 +59,15 @@ public partial class Player : CharacterBody2D
 			GetTree().Root.AddChild(bulletInstance);
 
 			canFire = false;
+		}
+	}
+
+	public void DecreaseHealth()
+	{
+		Health--;
+		if(Health <= 0)
+		{
+			EmitSignal(SignalName.GameOver);
 		}
 	}
 

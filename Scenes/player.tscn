@@ -23,7 +23,3 @@ texture = ExtResource("3_mkko0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_rhrie")
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
