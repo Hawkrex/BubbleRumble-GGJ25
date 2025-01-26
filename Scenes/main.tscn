@@ -19,7 +19,7 @@ offset_top = 25.0
 offset_right = 1252.0
 offset_bottom = 67.0
 theme_override_font_sizes/font_size = 30
-text = "Score : 2000000"
+text = "Score : 0"
 script = ExtResource("3_ivapd")
 Node = NodePath("../Game")
 
@@ -32,3 +32,25 @@ theme_override_font_sizes/font_size = 30
 text = "Health : 3"
 script = ExtResource("4_imtne")
 Node = NodePath("../Game")
+
+[node name="Keyboard controls" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 557.0
+offset_right = 298.0
+offset_bottom = 734.0
+theme_override_font_sizes/font_size = 26
+text = "Keyboard controls :
+ZQSD : Moving
+OKLM : Aiming
+Spacebar : Shooting"
+
+[node name="Gamepad controls" type="Label" parent="."]
+offset_left = 1008.0
+offset_top = 557.0
+offset_right = 1293.0
+offset_bottom = 734.0
+theme_override_font_sizes/font_size = 26
+text = "Gamepad controls :
+Left stick : Moving
+Right stick : Aiming
+RT / R2 : Shooting"
