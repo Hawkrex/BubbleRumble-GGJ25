@@ -9,7 +9,6 @@ public partial class ScoreLabel : Label
 	{
 		base._Ready();
 
-		//var game = GetNode<Node2D>("Game") as GameManager;
 		Node.ScoreChanged += ScoreChangedHandler;
 	}
 

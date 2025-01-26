@@ -27,6 +27,12 @@ public partial class EnemyAi : Node2D
 			Enemy.Velocity = (player.Position - Enemy.Position).Normalized() * Enemy.MovementSpeed;
 			Enemy.LookAt(player.Position);
 			Enemy.MoveAndSlide();
+
+			if(player.Position.DistanceSquaredTo(Enemy.Position) < 800)
+			{
+				player.DecreaseHealth();
+				Enemy.QueueFree();
+			}
 		}
 	}
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c26l5js6phbwv"]
+[gd_scene load_steps=5 format=3 uid="uid://c26l5js6phbwv"]
 
 [ext_resource type="PackedScene" uid="uid://dw6r2oqb8f57k" path="res://Scenes/game.tscn" id="1_vuuuw"]
 [ext_resource type="AudioStream" uid="uid://cvhfesngs4tg2" path="res://Assets/Musics/BubbleTrouble.wav" id="2_elfgl"]
 [ext_resource type="Script" path="res://Scripts/ScoreLabel.cs" id="3_ivapd"]
+[ext_resource type="Script" path="res://Scripts/HealthLabel.cs" id="4_imtne"]
 
 [node name="Main" type="Node2D"]
 
@@ -18,4 +19,13 @@ offset_right = 84.0
 offset_bottom = 46.0
 text = "Score : 0"
 script = ExtResource("3_ivapd")
+Node = NodePath("../Game")
+
+[node name="HealthLabel" type="Label" parent="." node_paths=PackedStringArray("Node")]
+offset_left = 28.0
+offset_top = 51.0
+offset_right = 102.0
+offset_bottom = 74.0
+text = "Health : 3"
+script = ExtResource("4_imtne")
 Node = NodePath("../Game")
